@@ -12,15 +12,14 @@ pipeline {
    stage('git clone') {
          steps {
             // Get some code from a GitHub repository
-            git 'https://github.com/snehitha-reddy/Game.git'
+            git 'https://github.com/Shilpavsqe/game-of-life1.git'
         }
         
         }
 	stage ('Compile and Build') {
          steps {
-           sh '''
-           mvn clean install -U  -Dmaven.test.skip=true 
-           '''
+           sh 'mvn clean install -U  -Dmaven.test.skip=true'
          }
   }
    }
+}
