@@ -12,7 +12,7 @@ pipeline {
    stage('git clone') {
          steps {
             // Get some code from a GitHub repository
-            git 'https://github.com/Shilpavsqe/game-of-life1.git'
+            sh 'git clone https://github.com/Shilpavsqe/game-of-life1.git'
         }
         
         }
