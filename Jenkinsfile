@@ -43,7 +43,7 @@ pipeline {
       }
 	   stage ('Publishing Artifact'){
            steps {
-	   nexusArtifactUploader artifacts: [[artifactId:'gameoflife', classifier: '', file: '/var/lib/jenkins/workspace/Test-pipeline/gameoflife-build/target/gameoflife-build-1.0-SNAPSHOT.jar', type: 'jar']], credentialsId: '19752a73-480d-4baa-b212-7db75aac251d', groupId: 'com.wakaleo.gameoflife', nexusUrl="${nexus_url}", nexusVersion: 'nexus3', protocol: 'http', repository: 'release', version: '4.0.0'
+	   nexusArtifactUploader artifacts: [[artifactId:'gameoflife', classifier: '', file: '/var/lib/jenkins/workspace/Test-pipeline/gameoflife-build/target/gameoflife-build-1.0-SNAPSHOT.jar', type: 'jar']], credentialsId: '19752a73-480d-4baa-b212-7db75aac251d', groupId: 'com.wakaleo.gameoflife', nexusUrl:'172.31.6.111:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'release', version: '4.0.0'
            archiveArtifacts '**/*.jar'
    }
 }
