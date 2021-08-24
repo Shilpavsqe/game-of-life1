@@ -47,3 +47,4 @@ pipeline {
            archiveArtifacts '**/*.jar'
    }
 }
+   }
