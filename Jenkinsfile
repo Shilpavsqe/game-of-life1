@@ -41,11 +41,5 @@ pipeline {
            archiveArtifacts '**/*.jar'
 	}
      }
-     stage('Docker Build') {
-      agent any
-      steps {
-        sh 'docker build -t shilpa0411/dockerfile:v3  .'
-      }
-    }
-  }
+     }
 }
