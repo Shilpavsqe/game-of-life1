@@ -45,7 +45,7 @@ pipeline {
 	    stage('Docker Build') {
       agent any
       steps {
-        sh 'docker build -t pudirohith/game1.0:v1 .'
+        sh 'docker build -t shilpa0411/dockerfile:v3  .'
       }
     }
   }
