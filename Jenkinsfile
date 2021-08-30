@@ -41,5 +41,12 @@ pipeline {
            archiveArtifacts '**/*.jar'
 	}
      }
+	   
+	    stage('Docker Build') {
+      agent any
+      steps {
+        sh 'docker build -t pudirohith/game1.0:v1 .'
+      }
+    }
   }
 }
